@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocoaPodsAssistant/ViewController.swift"
+            timestampString = "511866868.33043"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "processExecuteCommandSuccess(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CocoaPodsAssistant.ViewController.processExecuteCommandSuccess (with : __ObjC.NSString) -&gt; ()"
+                  moduleName = "CocoaPodsAssistant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sycf_ios_13579/Desktop/TEST/MACPlayer/CocoaPodsAssistant/CocoaPodsAssistant/ViewController.swift"
+                  timestampString = "511859092.454955"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "451">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CocoaPodsAssistant.ViewController.processExecuteCommandSuccess (with : __ObjC.NSString) -&gt; ()"
+                  moduleName = "CocoaPodsAssistant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sycf_ios_13579/Desktop/TEST/MACPlayer/CocoaPodsAssistant/CocoaPodsAssistant/ViewController.swift"
+                  timestampString = "511859092.456346"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "1971">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocoaPodsAssistant/ViewController.swift"
+            timestampString = "511866868.33043"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "processExecuteCommandError(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
