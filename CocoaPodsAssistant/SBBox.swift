@@ -7,9 +7,11 @@
 //
 
 import Cocoa
-
+protocol SBBoxDelegate {
+    func sbBoxGetFile(for path:String, with name: String);
+}
 class SBBox: NSBox {
-
+    var delegate: SBBoxDelegate?
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         self.register(forDraggedTypes: [kUTTypeURL as String])
@@ -22,11 +24,12 @@ class SBBox: NSBox {
         return NSDragOperation.copy
     }
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
-        let pboardArray = sender.draggingPasteboard().propertyList(forType: "NSFilenamesPboardType") as! Array<Any>
-        let filterArray = SBFilterFormat()
-        let filteredPath = filterArray.filterFormat(by: pboardArray)
-        if !filteredPath.isEmpty {
-            Swift.print(filteredPath)
+        let pboardArray = sender.draggingPasteboard().propertyList(forType: "NSFilenamesPboardType") as! Array<String>
+        let filterFormat = SBFilterFormat()
+        let filteredPath = filterFormat.filterFormat(by: pboardArray)
+        if !(filteredPath?.isEmpty)! {
+            Swift.print("filteredPath:" + "\(filteredPath)")
+            delegate?.sbBoxGetFile(for: filteredPath! ,with: filterFormat.name)
             return true
         }
         return false

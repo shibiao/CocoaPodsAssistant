@@ -7,19 +7,25 @@
 //
 
 import Foundation
+//SBProcess代理协议
 protocol SBProcessDelegate {
-    func processExecuteCommandSuccess(with succssStr: NSString);
-    func processExecuteCommandError(with errorStr: NSString);
+    func processExecuteCommandSuccess(with succssStr: String);
+    func processExecuteCommandError(with errorStr: String);
 }
 class SBProcess: NSObject {
+    //代理
     var delegate: SBProcessDelegate?
+    //当前路径
     var currentPath = String()
+    //执行命令
     var command = String()
-     init(currentPath: String, command: String) {
+    //初始化
+    init(currentPath: String, command: String) {
         super.init()
         self.currentPath = currentPath
         self.command = command
     }
+    //加载进程
     func launchProcess() {
         let process = Process()
         
@@ -37,6 +43,7 @@ class SBProcess: NSObject {
         process.waitUntilExit()
 
         DispatchQueue.global().async {
+            //获取数据
             let outData = outPipe.fileHandleForReading.availableData
 //            NotificationCenter.default.addObserver(self, selector: #selector(self.readCompeted(_:)), name: NSNotification.Name.NSFileHandleConnectionAccepted, object: outPipe.fileHandleForReading)
             outPipe.fileHandleForReading.readInBackgroundAndNotify()
@@ -46,12 +53,12 @@ class SBProcess: NSObject {
             let errorStr = String(data: errorData, encoding: String.Encoding.utf8)
             if let str = errorStr {
                 DispatchQueue.main.async {
-                    self.delegate?.processExecuteCommandError(with: str as NSString)
+                    self.delegate?.processExecuteCommandError(with: str)
                 }
             }
             if let str = outStr {
                 DispatchQueue.main.async {
-                    self.delegate?.processExecuteCommandSuccess(with: str as NSString)
+                    self.delegate?.processExecuteCommandSuccess(with: str)
                 }
             }
             

@@ -718,6 +718,9 @@
                                             <size key="minSize" width="344" height="246"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="ano-QO-g8K"/>
+                                            </connections>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -776,7 +779,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="box" destination="yZ1-cX-YmH" id="rjd-K8-nPB"/>
+                        <outlet property="boxLabel" destination="7Lq-ii-fcv" id="Cxr-Yw-SjX"/>
                         <outlet property="inputTextField" destination="ntk-Eo-Rca" id="dY3-s5-DBF"/>
+                        <outlet property="podfileTextView" destination="0jB-OB-ywH" id="Nkb-EA-Zf6"/>
                         <outlet property="subView" destination="pnJ-nL-zWY" id="rxN-ym-27F"/>
                         <outlet property="textField" destination="Znb-KG-hvn" id="qPl-VY-s4f"/>
                     </connections>
