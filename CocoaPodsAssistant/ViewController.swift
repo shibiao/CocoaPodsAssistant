@@ -34,6 +34,10 @@ class ViewController: NSViewController {
     }
 
     @IBAction func run(_ sender: Any) {
+        runProcess()
+    }
+    //运行进程
+    func runProcess() {
         if !(textField.string?.isEmpty)! {
             textField.string = ""
         }
@@ -44,12 +48,10 @@ class ViewController: NSViewController {
         }
         if let resultPath = path {
             let process = SBProcess(currentPath: resultPath, command: inputTextField.stringValue)
-            print(inputTextField.stringValue)
             process.delegate = self
             process.launchProcess()
         }
-//        print(Thread.callStackSymbols)
-        
+        //        print(Thread.callStackSymbols)
     }
     override var representedObject: Any? {
         didSet {
@@ -90,9 +92,6 @@ extension ViewController: SBProcessDelegate {
         let fileHandle = FileHandle(forReadingAtPath: path.appending("/Podfile"))
         if let fileData = fileHandle?.availableData {
             podfileTextView.string = String(data: fileData, encoding: String.Encoding.utf8)
-            podfileTextView.textStorage?.delegate = self
-//            podfileTextView.resignFirstResponder()
-            podfileTextView.becomeFirstResponder()
         }
     }
     override func mouseDown(with event: NSEvent) {

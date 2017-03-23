@@ -9,7 +9,15 @@
 import Foundation
 //SBProcess代理协议
 protocol SBProcessDelegate {
+    
+    /// 进程执行命令成功回调
+    ///
+    /// - Parameter succssStr: 返回成功文字数据
     func processExecuteCommandSuccess(with succssStr: String);
+    
+    /// 进程执行命令失败回调
+    ///
+    /// - Parameter errorStr: 返回错误文字数据
     func processExecuteCommandError(with errorStr: String);
 }
 class SBProcess: NSObject {
@@ -45,7 +53,6 @@ class SBProcess: NSObject {
         DispatchQueue.global().async {
             //获取数据
             let outData = outPipe.fileHandleForReading.availableData
-//            NotificationCenter.default.addObserver(self, selector: #selector(self.readCompeted(_:)), name: NSNotification.Name.NSFileHandleConnectionAccepted, object: outPipe.fileHandleForReading)
             outPipe.fileHandleForReading.readInBackgroundAndNotify()
             let errorData = errorPipe.fileHandleForReading.availableData
             errorPipe.fileHandleForReading.readInBackgroundAndNotify()
@@ -53,11 +60,13 @@ class SBProcess: NSObject {
             let errorStr = String(data: errorData, encoding: String.Encoding.utf8)
             if let str = errorStr {
                 DispatchQueue.main.async {
+                    //错误情况下代理传值，经过错误不代表执行结果一定有错误
                     self.delegate?.processExecuteCommandError(with: str)
                 }
             }
             if let str = outStr {
                 DispatchQueue.main.async {
+                    //成功情况下代理传值
                     self.delegate?.processExecuteCommandSuccess(with: str)
                 }
             }
@@ -67,3 +76,8 @@ class SBProcess: NSObject {
         }
     }
 }
+
+
+
+
+//            NotificationCenter.default.addObserver(self, selector: #selector(self.readCompeted(_:)), name: NSNotification.Name.NSFileHandleConnectionAccepted, object: outPipe.fileHandleForReading)
