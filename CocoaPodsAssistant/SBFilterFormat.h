@@ -19,4 +19,6 @@
  @return 返回文件所在文件夹路径
  */
 -(NSString *)filterFormatByArray:(NSArray *)array;
+
+
 @end

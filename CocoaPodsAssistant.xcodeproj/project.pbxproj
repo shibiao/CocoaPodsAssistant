@@ -9,19 +9,18 @@
 /* Begin PBXBuildFile section */
 		9132E8481E81367A00320687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9132E8471E81367A00320687 /* AppDelegate.swift */; };
 		9132E84A1E81367A00320687 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9132E8491E81367A00320687 /* ViewController.swift */; };
-		9132E84C1E81367A00320687 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9132E84B1E81367A00320687 /* Document.swift */; };
 		9132E84E1E81367A00320687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9132E84D1E81367A00320687 /* Assets.xcassets */; };
 		9132E8511E81367A00320687 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9132E84F1E81367A00320687 /* Main.storyboard */; };
 		916CFD131E824FDD00E8F1E1 /* SBProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916CFD121E824FDD00E8F1E1 /* SBProcess.swift */; };
 		916CFD151E8264C500E8F1E1 /* SBBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916CFD141E8264C500E8F1E1 /* SBBox.swift */; };
 		916CFD1D1E82844C00E8F1E1 /* SBFilterFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 916CFD1C1E82844C00E8F1E1 /* SBFilterFormat.m */; };
+		919082651E84CD3C00F7965E /* NSString+Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 919082641E84CD3C00F7965E /* NSString+Name.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9132E8441E81367A00320687 /* CocoaPodsAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaPodsAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9132E8471E81367A00320687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9132E8491E81367A00320687 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9132E84B1E81367A00320687 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		9132E84D1E81367A00320687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9132E8501E81367A00320687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9132E8521E81367A00320687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -30,6 +29,8 @@
 		916CFD1A1E82844B00E8F1E1 /* CocoaPodsAssistant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaPodsAssistant-Bridging-Header.h"; sourceTree = "<group>"; };
 		916CFD1B1E82844C00E8F1E1 /* SBFilterFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBFilterFormat.h; sourceTree = "<group>"; };
 		916CFD1C1E82844C00E8F1E1 /* SBFilterFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBFilterFormat.m; sourceTree = "<group>"; };
+		919082631E84CD3C00F7965E /* NSString+Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Name.h"; sourceTree = "<group>"; };
+		919082641E84CD3C00F7965E /* NSString+Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Name.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +69,8 @@
 				916CFD141E8264C500E8F1E1 /* SBBox.swift */,
 				916CFD1B1E82844C00E8F1E1 /* SBFilterFormat.h */,
 				916CFD1C1E82844C00E8F1E1 /* SBFilterFormat.m */,
-				9132E84B1E81367A00320687 /* Document.swift */,
+				919082631E84CD3C00F7965E /* NSString+Name.h */,
+				919082641E84CD3C00F7965E /* NSString+Name.m */,
 				9132E84D1E81367A00320687 /* Assets.xcassets */,
 				9132E84F1E81367A00320687 /* Main.storyboard */,
 				9132E8521E81367A00320687 /* Info.plist */,
@@ -109,7 +111,7 @@
 				TargetAttributes = {
 					9132E8431E81367A00320687 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = M54Y5FDG74;
+						DevelopmentTeam = W547SRU75H;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -154,7 +156,7 @@
 				9132E8481E81367A00320687 /* AppDelegate.swift in Sources */,
 				916CFD151E8264C500E8F1E1 /* SBBox.swift in Sources */,
 				916CFD131E824FDD00E8F1E1 /* SBProcess.swift in Sources */,
-				9132E84C1E81367A00320687 /* Document.swift in Sources */,
+				919082651E84CD3C00F7965E /* NSString+Name.m in Sources */,
 				916CFD1D1E82844C00E8F1E1 /* SBFilterFormat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +272,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = M54Y5FDG74;
+				DEVELOPMENT_TEAM = W547SRU75H;
 				INFOPLIST_FILE = CocoaPodsAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sb.CocoaPodsAssistant;
@@ -288,7 +290,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = M54Y5FDG74;
+				DEVELOPMENT_TEAM = W547SRU75H;
 				INFOPLIST_FILE = CocoaPodsAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sb.CocoaPodsAssistant;

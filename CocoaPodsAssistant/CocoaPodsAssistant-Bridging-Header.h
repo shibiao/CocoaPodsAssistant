@@ -3,3 +3,4 @@
 //
 
 #import "SBFilterFormat.h"
+#import "NSString+Name.h"
