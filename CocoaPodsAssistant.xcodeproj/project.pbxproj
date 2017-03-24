@@ -275,6 +275,7 @@
 				DEVELOPMENT_TEAM = W547SRU75H;
 				INFOPLIST_FILE = CocoaPodsAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = sb.CocoaPodsAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CocoaPodsAssistant/CocoaPodsAssistant-Bridging-Header.h";
@@ -293,6 +294,7 @@
 				DEVELOPMENT_TEAM = W547SRU75H;
 				INFOPLIST_FILE = CocoaPodsAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = sb.CocoaPodsAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CocoaPodsAssistant/CocoaPodsAssistant-Bridging-Header.h";

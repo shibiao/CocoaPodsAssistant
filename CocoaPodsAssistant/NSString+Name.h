@@ -9,5 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Name)
+
+/**
+ 去掉扩展返回文件名
+
+ @return 返回文件名
+ */
 -(NSString *)returnFileNameWithoutExtension;
 @end
