@@ -11,7 +11,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     var status = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
-    var popover = NSPopover()
+    open var popover = NSPopover()
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -26,13 +26,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     func showOrHidePopover(_ sender: NSStatusBarButton) {
         if popover.isShown {
-            popover.performClose(sender)
+            popover.close()
         }else{
             popoverShow()
         }
     }
     func popoverShow() {
-        popover.behavior = .semitransient
+        popover.behavior = .applicationDefined
         popover.show(relativeTo: (status.button?.frame)!, of: status.button!, preferredEdge: .minY)
     }
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -684,30 +684,30 @@
             <objects>
                 <viewController identifier="ViewController" storyboardIdentifier="ViewController" id="5gI-5U-AMq" customClass="ViewController" customModule="CocoaPodsAssistant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="373" height="538"/>
+                        <rect key="frame" x="0.0" y="0.0" width="373" height="598"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JTj-6u-sFo">
-                                <rect key="frame" x="146" y="0.0" width="81" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EGh-yW-195">
+                                <rect key="frame" x="133" y="0.0" width="107" height="32"/>
+                                <buttonCell key="cell" type="push" title="生成并打开" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EGh-yW-195">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="run:" target="5gI-5U-AMq" id="RvZ-js-3kL"/>
                                 </connections>
                             </button>
                             <scrollView wantsLayer="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-x8-3wO">
-                                <rect key="frame" x="13" y="43" width="346" height="292"/>
+                                <rect key="frame" x="13" y="43" width="346" height="352"/>
                                 <clipView key="contentView" id="L26-mx-fPk">
-                                    <rect key="frame" x="1" y="1" width="344" height="290"/>
+                                    <rect key="frame" x="1" y="1" width="344" height="350"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="0jB-OB-ywH">
-                                            <rect key="frame" x="0.0" y="-1" width="344" height="290"/>
+                                            <rect key="frame" x="0.0" y="-1" width="344" height="350"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="344" height="290"/>
+                                            <size key="minSize" width="344" height="350"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <connections>
@@ -722,12 +722,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="hFW-Zb-mjO">
-                                    <rect key="frame" x="329" y="1" width="16" height="290"/>
+                                    <rect key="frame" x="329" y="1" width="16" height="350"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <box boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="yZ1-cX-YmH" customClass="SBBox" customModule="CocoaPodsAssistant" customModuleProvider="target">
-                                <rect key="frame" x="83" y="355" width="206" height="150"/>
+                                <rect key="frame" x="83" y="415" width="206" height="150"/>
                                 <view key="contentView" id="GSs-VQ-rqR">
                                     <rect key="frame" x="1" y="1" width="204" height="148"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -814,7 +814,7 @@
                     </constraints>
                 </customView>
             </objects>
-            <point key="canvasLocation" x="641.5" y="374"/>
+            <point key="canvasLocation" x="641.5" y="404"/>
         </scene>
     </scenes>
 </document>

@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-
+//分三步走
 enum StepEnumeration {
     case First
     case Second
@@ -38,6 +38,7 @@ class ViewController: NSViewController {
             case .Second:
                 return "pod install"
             case .Third:
+                //NSString 转 String 因为returnFileNameWithoutExtension方法是增加的NSString category方法
                 let tmpStr = self.boxLabel.stringValue as NSString
                 let str = tmpStr.returnFileNameWithoutExtension() as String
                 return "open " + self.path + "/" + str.appending(".xcworkspace")
@@ -90,6 +91,8 @@ extension ViewController: SBProcessDelegate {
     //第一步
     func firstStep(with successStr: String) {
         if step == .Third {
+            let delegate = NSApp.delegate as! AppDelegate
+            delegate.popover.close()
             return
         }
         let frame = self.view.window?.frame

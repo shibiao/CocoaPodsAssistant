@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CocoaPodsAssistant/ViewController.swift"
-            timestampString = "512021808.97267"
+            timestampString = "512037908.159317"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "processExecuteCommandSuccess(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,13 +26,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CocoaPodsAssistant/ViewController.swift"
-            timestampString = "512021808.97267"
+            timestampString = "512037908.159317"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "textDidChange(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocoaPodsAssistant/SBBox.swift"
+            timestampString = "512029252.600007"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "performDragOperation(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CocoaPodsAssistant.SBBox.performDragOperation (__ObjC.NSDraggingInfo) -&gt; Swift.Bool"
+                  moduleName = "CocoaPodsAssistant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sycf_ios_13579/Documents/GitHub/CocoaPodsAssistant/CocoaPodsAssistant/SBBox.swift"
+                  timestampString = "512029252.662763"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1052">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CocoaPodsAssistant.SBBox.performDragOperation (__ObjC.NSDraggingInfo) -&gt; Swift.Bool"
+                  moduleName = "CocoaPodsAssistant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sycf_ios_13579/Documents/GitHub/CocoaPodsAssistant/CocoaPodsAssistant/SBBox.swift"
+                  timestampString = "512029252.681272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "2965">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

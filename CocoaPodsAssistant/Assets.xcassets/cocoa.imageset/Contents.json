@@ -1,18 +1,14 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "filename" : "cocoa.png",
+      "idiom" : "mac",
+      "filename" : "cocoaIcon_16.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
-      "filename" : "cocoa@2x.png",
+      "idiom" : "mac",
+      "filename" : "cocoaIcon_16@2x.png",
       "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
     }
   ],
   "info" : {
