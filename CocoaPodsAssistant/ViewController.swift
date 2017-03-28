@@ -52,6 +52,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func run(_ sender: Any) {
+        guard self.path != nil else {return}
         DispatchQueue.global().async {
             self.runProcess()
         }
