@@ -32,13 +32,14 @@ class ViewController: NSViewController {
     //执行命令
     var cmd: String!{
         get {
+            //每一步执行的命令
             switch step {
             case .First:
                 return "pod init"
             case .Second:
                 return "pod install"
             case .Third:
-                //NSString 转 String 因为returnFileNameWithoutExtension方法是增加的NSString category方法
+                //NSString 转 String 因为returnFileNameWithoutExtension方法是自定义的NSString category方法
                 let tmpStr = self.boxLabel.stringValue as NSString
                 let str = tmpStr.returnFileNameWithoutExtension() as String
                 return "open " + self.path + "/" + str.appending(".xcworkspace")
@@ -62,7 +63,6 @@ class ViewController: NSViewController {
         if !(textField.string?.isEmpty)! {
             textField.string = ""
         }
-        
         if subWindow != nil {
             view.window?.removeChildWindow(subWindow)
             subWindow = nil
@@ -73,6 +73,11 @@ class ViewController: NSViewController {
             process.launchProcess()
         }
         //        print(Thread.callStackSymbols)
+    }
+    //关闭应用程序
+    @IBAction func closeApplication(_ sender: Any) {
+        NSApp.terminate(sender)
+        
     }
     override var representedObject: Any? {
         didSet {
@@ -92,22 +97,19 @@ extension ViewController: SBProcessDelegate {
     //第一步
     func firstStep(with successStr: String) {
         if step == .Third {
-            let delegate = NSApp.delegate as! AppDelegate
-            delegate.popover.close()
             return
         }
         let frame = self.view.window?.frame
-        self.subWindow = NSWindow(contentRect: NSRect(x: (frame?.origin.x)!, y: (frame?.origin.y)!-100, width: (frame?.size.width)!, height: 100), styleMask: [.unifiedTitleAndToolbar], backing: NSBackingStoreType.nonretained, defer: true, screen: NSScreen.main())
+        self.subWindow = NSWindow(contentRect: NSRect(x: (frame?.origin.x)!, y: (frame?.origin.y)!-100, width: (frame?.size.width)!, height: 100), styleMask: [.unifiedTitleAndToolbar], backing: NSBackingStoreType.buffered, defer: true, screen: NSScreen.main())
         self.subWindow.contentView = self.subView
         self.view.window?.addChildWindow(self.subWindow, ordered: .below)
         self.textField.string = successStr as String
         if step == .First {
             step = .Second
             secondStep()
-            return
         }else{
             step = .Third
-            runProcess()
+            perform(#selector(runProcess), with: self, afterDelay: 2)
         }
         
     }

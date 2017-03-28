@@ -35,7 +35,6 @@ class SBBox: NSBox {
         let filterFormat = SBFilterFormat()
         let filteredPath = filterFormat.filterFormat(by: pboardArray)
         if filteredPath != nil {
-            Swift.print("filteredPath:" + "\(filteredPath)")
             delegate?.sbBoxGetFile(for: filteredPath! ,with: filterFormat.name)
             return true
         }
