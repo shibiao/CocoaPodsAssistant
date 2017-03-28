@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -661,34 +660,16 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller-->
-        <scene sceneID="R2V-B0-nI4">
-            <objects>
-                <windowController storyboardIdentifier="Document Window Controller" id="jGA-0Y-lOj" sceneMemberID="viewController">
-                    <window key="window" title="Cocoapods Assistant" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                    </window>
-                    <connections>
-                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="window.shadowedContentViewController" id="nsd-lR-9xd"/>
-                    </connections>
-                </windowController>
-                <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="75" y="250"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController identifier="ViewController" storyboardIdentifier="ViewController" id="5gI-5U-AMq" customClass="ViewController" customModule="CocoaPodsAssistant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="373" height="598"/>
+                        <rect key="frame" x="0.0" y="0.0" width="312" height="598"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JTj-6u-sFo">
-                                <rect key="frame" x="133" y="0.0" width="107" height="32"/>
+                                <rect key="frame" x="103" y="0.0" width="107" height="32"/>
                                 <buttonCell key="cell" type="push" title="生成并打开" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EGh-yW-195">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -697,43 +678,14 @@
                                     <action selector="run:" target="5gI-5U-AMq" id="RvZ-js-3kL"/>
                                 </connections>
                             </button>
-                            <scrollView wantsLayer="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-x8-3wO">
-                                <rect key="frame" x="13" y="43" width="346" height="352"/>
-                                <clipView key="contentView" id="L26-mx-fPk">
-                                    <rect key="frame" x="1" y="1" width="344" height="350"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="0jB-OB-ywH">
-                                            <rect key="frame" x="0.0" y="-1" width="344" height="350"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="344" height="350"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
-                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <connections>
-                                                <outlet property="delegate" destination="5gI-5U-AMq" id="ano-QO-g8K"/>
-                                            </connections>
-                                        </textView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Cyk-5W-x4J">
-                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="hFW-Zb-mjO">
-                                    <rect key="frame" x="329" y="1" width="16" height="350"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
                             <box boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="yZ1-cX-YmH" customClass="SBBox" customModule="CocoaPodsAssistant" customModuleProvider="target">
-                                <rect key="frame" x="83" y="415" width="206" height="150"/>
+                                <rect key="frame" x="41" y="415" width="231" height="150"/>
                                 <view key="contentView" id="GSs-VQ-rqR">
-                                    <rect key="frame" x="1" y="1" width="204" height="148"/>
+                                    <rect key="frame" x="1" y="1" width="229" height="148"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lq-ii-fcv">
-                                            <rect key="frame" x="16" y="65" width="172" height="19"/>
+                                            <rect key="frame" x="28" y="65" width="172" height="19"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="拖拽.xcodeproj文件到此" id="2Kr-A7-qty">
                                                 <font key="font" size="15" name=".PingFangSC-Regular"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -749,21 +701,50 @@
                                     </constraints>
                                 </view>
                             </box>
+                            <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-x8-3wO">
+                                <rect key="frame" x="16" y="43" width="281" height="352"/>
+                                <clipView key="contentView" id="L26-mx-fPk">
+                                    <rect key="frame" x="0.0" y="0.0" width="281" height="352"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="0jB-OB-ywH">
+                                            <rect key="frame" x="0.0" y="-1" width="281" height="352"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="281" height="352"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="ano-QO-g8K"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Cyk-5W-x4J">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="hFW-Zb-mjO">
+                                    <rect key="frame" x="265" y="0.0" width="16" height="352"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="JTj-6u-sFo" firstAttribute="top" secondItem="p9b-x8-3wO" secondAttribute="bottom" constant="15" id="6h0-qI-gRY"/>
                             <constraint firstItem="yZ1-cX-YmH" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="33" id="7rD-00-mMH"/>
                             <constraint firstItem="p9b-x8-3wO" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="203" id="AAA-CC-QHi"/>
                             <constraint firstItem="p9b-x8-3wO" firstAttribute="top" secondItem="yZ1-cX-YmH" secondAttribute="bottom" constant="20" id="KM2-f6-aaO"/>
-                            <constraint firstAttribute="trailing" secondItem="yZ1-cX-YmH" secondAttribute="trailing" constant="83.5" id="LGr-bn-9Q4"/>
+                            <constraint firstAttribute="trailing" secondItem="yZ1-cX-YmH" secondAttribute="trailing" constant="40.5" id="LGr-bn-9Q4"/>
                             <constraint firstItem="JTj-6u-sFo" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="UKV-ym-dJo"/>
                             <constraint firstItem="JTj-6u-sFo" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="bC2-KJ-U5n"/>
                             <constraint firstItem="yZ1-cX-YmH" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="bqC-GG-9TJ"/>
-                            <constraint firstItem="yZ1-cX-YmH" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="83.5" id="hU0-MZ-ePm"/>
-                            <constraint firstItem="p9b-x8-3wO" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="13.5" id="nnO-r8-YIv"/>
+                            <constraint firstItem="yZ1-cX-YmH" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="40.5" id="hU0-MZ-ePm"/>
+                            <constraint firstItem="p9b-x8-3wO" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="15.5" id="nnO-r8-YIv"/>
                             <constraint firstAttribute="bottom" secondItem="JTj-6u-sFo" secondAttribute="bottom" constant="7" id="sem-Vl-Hcc"/>
                             <constraint firstItem="p9b-x8-3wO" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="tBI-OK-oCv"/>
-                            <constraint firstAttribute="trailing" secondItem="p9b-x8-3wO" secondAttribute="trailing" constant="13.5" id="vPB-SM-GpQ"/>
+                            <constraint firstAttribute="trailing" secondItem="p9b-x8-3wO" secondAttribute="trailing" constant="15.5" id="vPB-SM-GpQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -814,7 +795,7 @@
                     </constraints>
                 </customView>
             </objects>
-            <point key="canvasLocation" x="641.5" y="404"/>
+            <point key="canvasLocation" x="672" y="404"/>
         </scene>
     </scenes>
 </document>

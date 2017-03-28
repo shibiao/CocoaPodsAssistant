@@ -135,20 +135,20 @@ extension ViewController:  NSTextViewDelegate {
     func wirteFileContent() {
         
         DispatchQueue.global().asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 1), execute: {
-            guard !self.path.isEmpty else {return}
-            let podfilePath = self.path.appending("/Podfile")
-            if FileManager.default.fileExists(atPath: podfilePath)
-            {
+            if let path = self.path {
+                let podfilePath = path.appending("/Podfile")
+                if FileManager.default.fileExists(atPath: podfilePath)
+                {
                     do {
                         if let str = self.podfileTextView.string {
                             try str.write(toFile: podfilePath, atomically: true, encoding: String.Encoding.utf8)
                         }
                         
                     } catch {
-                    print(error)
+                        print(error)
+                    }
                 }
             }
-
         })
     }
 }

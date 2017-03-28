@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     func popoverShow() {
-        popover.behavior = .applicationDefined
+        popover.behavior = .transient
         popover.show(relativeTo: (status.button?.frame)!, of: status.button!, preferredEdge: .minY)
     }
     func applicationWillTerminate(_ aNotification: Notification) {
