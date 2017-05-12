@@ -5,6 +5,6 @@ CocoaPodsAssistant ，masOS
 
 使用环境：>= macOS10.10
 
-点击“生成并打开”时请手动关闭当前Xcode项目，生成完后会自动打开。
+## 点击“生成并打开”时请手动关闭当前Xcode项目，生成完后会自动打开。
 
 ![pic](https://github.com/shibiao/CocoaPodsAssistant/blob/master/18.gif)
